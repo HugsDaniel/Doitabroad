@@ -1,0 +1,96 @@
+.boat-pic {
+  color: white;
+  text-align: center;
+  height: calc(100vh - 70px);
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.header-trip {
+  padding: 15px;
+  background-color: white;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.book-trip {
+  background-color: $gray;
+  color: grey;
+}
+
+.fa-arrow-right:before {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header-trip-captain {
+  padding: 20px;
+}
+
+.header-trip h1 {
+    font-size: 25px;
+    margin-top: 0;
+    color: grey;
+}
+.header-trip p {
+    font-weight: normal;
+    font-size: 14px;
+    color: #777777;
+}
+
+.about-trip h2 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.trip-description {
+    background: $gray;
+    padding: 50px 95px 100px 95px;
+    font-size: 14px;
+    color: #555555;
+    display: flex;
+    justify-content: center;
+}
+
+// #F5F5F5
+
+#trip-data {
+    font-weight: normal;
+    font-size: 12px;
+    color: #797373;
+}
+
+#trip-data li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+#trip-data i {
+  font-size: 20px;
+  color: #9B9B9B;
+  width: 20px;
+  text-align: center;
+}
+
+#trip-data strong {
+  margin-left: 9px;
+}
+
+.form-card {
+  margin: 50px 0;
+  margin-right: 0px;
+  margin-right: 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+.list-unstyled {
+  font-size: 15px;
+}

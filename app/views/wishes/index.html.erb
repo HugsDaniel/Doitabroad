@@ -1,2 +1,24 @@
-<h1>Wishes#index</h1>
-<p>Find me in app/views/wishes/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="text-center">
+      <h1>Universités disponibles</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row padded">
+    <% @results.each do |result| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= result.photo %>');">
+        <div class="card-category"> <%= result.pays.capitalize %> </div>
+        <div class="card-description">
+          <h2><%= result.name %></h2>
+          <p><%= result.city %></p>
+        </div>
+        <%= link_to 'voir', university_path(result), class: 'card-link' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

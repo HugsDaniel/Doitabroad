@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917124925) do
+ActiveRecord::Schema.define(version: 20170917132909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "reservations", force: :cascade do |t|
+    t.string   "status",        default: "pending"
+    t.integer  "price",         default: 200
+    t.integer  "user_id"
+    t.integer  "university_id"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["university_id"], name: "index_reservations_on_university_id", using: :btree
+    t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
+  end
 
   create_table "universities", force: :cascade do |t|
     t.string   "name"
@@ -22,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170917124925) do
     t.string   "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "course"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,5 +70,7 @@ ActiveRecord::Schema.define(version: 20170917124925) do
     t.index ["user_id"], name: "index_wishes_on_user_id", using: :btree
   end
 
+  add_foreign_key "reservations", "universities"
+  add_foreign_key "reservations", "users"
   add_foreign_key "wishes", "users"
 end

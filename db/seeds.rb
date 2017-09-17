@@ -15,11 +15,11 @@ User.destroy_all
 puts 'Seeding...'
 University.create!(
 {
-  city: 'Paris',
-  name: 'La Sorbonne',
-  pays: 'france',
+  city: 'New-York',
+  name: 'Stern School of Business',
+  pays: 'USA',
   course: 'commerce',
-  remote_photo_url: 'http://www.paris-sorbonne.fr/IMG/jpg/Place_de_la_Sorbonne.jpg'
+  remote_photo_url: 'https://www.mbamission.com/blog/wp-content/uploads/2015/06/NYU-Stern-2.jpg'
 }
 )
 
@@ -43,15 +43,6 @@ University.create!(
 }
 )
 
-University.create!(
-{
-  city: 'Paris',
-  name: 'HEC',
-  pays: 'france',
-  course: 'commerce',
-  remote_photo_url: 'http://www.hec.edu/var/corporate/storage/images/media/images/hec-paris-new-academic-building-2012/180494-1-fre-FR/HEC-Paris-new-academic-building-2012.jpg'
-}
-)
 
 University.create!(
 {

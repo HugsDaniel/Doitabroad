@@ -26,4 +26,6 @@ class User < ApplicationRecord
 
     return user
   end
+
+    mount_uploader :profile_pic, ProfilePicUploader
 end
